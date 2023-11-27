@@ -2,7 +2,13 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    public float health = 100f;
+    // Set default values if needed
+    public float minHealth = 10f;
+    public float maxHealth = 100f;
+
+    private float health;
+    public float Health => health;
+
     public float speed = 3f;
 
     private Transform player;
@@ -12,6 +18,9 @@ public class Zombie : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         zombieRigidbody = GetComponent<Rigidbody>();
+
+        // Set random health within the specified range
+        health = Random.Range(minHealth, maxHealth);
     }
 
     void Update()
@@ -35,12 +44,15 @@ public class Zombie : MonoBehaviour
         if (health <= 0)
         {
             Die();
+
+            ScoringSystemTMP.Instance.AddScore(Random.Range(50, 100));
+
         }
     }
 
     void Die()
     {
-        // Perform any death animations or effects here
+      
         Destroy(gameObject);
     }
 }
