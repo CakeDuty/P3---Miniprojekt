@@ -6,6 +6,7 @@ public class PlayerShooting : MonoBehaviour
     public float range = 100f;
     public ParticleSystem shootParticles;
 
+
     void Update()
     {
         if (Input.GetButtonDown("Fire1")) // Assuming "Fire1" is the input for shooting (you can customize this)
