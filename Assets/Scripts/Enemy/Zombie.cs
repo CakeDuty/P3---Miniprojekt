@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    // Set default values if needed
+ 
     public float minHealth = 10f;
     public float maxHealth = 100f;
 
@@ -19,7 +19,6 @@ public class Zombie : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         zombieRigidbody = GetComponent<Rigidbody>();
 
-        // Set random health within the specified range
         health = Random.Range(minHealth, maxHealth);
     }
 

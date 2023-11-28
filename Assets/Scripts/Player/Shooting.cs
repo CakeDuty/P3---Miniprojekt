@@ -9,7 +9,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) // Assuming "Fire1" is the input for shooting (you can customize this)
+        if (Input.GetButtonDown("Fire1")) 
         {
             Shoot();
         }

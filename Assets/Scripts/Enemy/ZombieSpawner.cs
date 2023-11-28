@@ -12,7 +12,7 @@ public class ZombieSpawner : MonoBehaviour
 
     void Start()
     {
-        // Start spawning zombies repeatedly
+       
         InvokeRepeating("SpawnZombies", 0f, Random.Range(minSpawnInterval, maxSpawnInterval));
     }
 
