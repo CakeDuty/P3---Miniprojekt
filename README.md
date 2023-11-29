@@ -11,7 +11,7 @@ The main parts of the game are:
 * An abandoned village you can run around to run from the zombies
 
 # Running It
-1. Download Unity >= 2021.2.14f
+1. Download Unity >= 2022.3.8f1
 2. Clone or Download the project
 3. The game requires a computer with a mouse and keyboard
 
